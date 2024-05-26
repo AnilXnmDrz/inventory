@@ -65,6 +65,11 @@ func API(db *sql.DB, log *log.Logger) http.Handler {
 		access := controllers.Access{Db: db, Log: log}
 		app.Handle(http.MethodGet, "/access", access.List)
 	}
+	// Access-roles Routing
+	{
+		accessRoles := controllers.RoleBasedAccess{Db: db, Log: log}
+		app.Handle(http.MethodGet, "/access-roles", accessRoles.List)
+	}
 
 	// Regions Routing
 	{

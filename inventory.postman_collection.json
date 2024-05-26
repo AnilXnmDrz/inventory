@@ -182,7 +182,30 @@
 								}
 							},
 							"response": []
-						}
+						},
+						{
+                            "name": "role_based_access",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Token",
+                                        "value": "{{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{url}}/access-roles",
+                                    "host": [
+                                        "{{url}}"
+                                    ],
+                                    "path": [
+                                        "access_roles"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
