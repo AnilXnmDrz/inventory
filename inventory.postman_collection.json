@@ -200,7 +200,7 @@
                                         "{{url}}"
                                     ],
                                     "path": [
-                                        "access_roles"
+                                        "access-roles"
                                     ]
                                 }
                             },
